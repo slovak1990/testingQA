@@ -4,7 +4,6 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import io.qameta.allure.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 
