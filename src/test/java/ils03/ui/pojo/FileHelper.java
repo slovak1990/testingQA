@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static org.apache.poi.ss.usermodel.Row.MissingCellPolicy.RETURN_NULL_AND_BLANK;
@@ -225,5 +228,38 @@ public class FileHelper {
             list.add(date[0]);
         }
         return list;
+    }
+
+    @Step("Получение даты по зоне {zone} и паттерну {dateAndTimePattern}")
+    public String getDateFormat(String zone, String dateAndTimePattern) {
+        return LocalDateTime.now(ZoneId.of(zone))
+                .format(DateTimeFormatter.ofPattern(dateAndTimePattern));
+    }
+
+    @Step("Изменить строковую дату без учёта времени")
+    public String changeFormatDates(String dateValue) {
+        String[] date;
+        if (dateValue.contains(" ")) {
+            date = dateValue.split(" ");
+            return date[0];
+        } else {
+            date = dateValue.split("\\n");
+            return date[1];
+        }
+    }
+
+    @Step("Округлить строкового значение {str}")
+    public String roundUpValue(String str) {
+        String[] list = str.split("\\.");
+        return list[0];
+    }
+
+    @Step("Разбить строку в массив уникальных значений")
+    public String[] getUniqArrayFromString(String str, String separator) {
+        String[] newStringArr = str.split(separator);
+        for (int i = 0; i < newStringArr.length; i++) {
+            newStringArr[i] = newStringArr[i].trim();
+        }
+        return Arrays.stream(newStringArr).distinct().toArray(String[]::new);
     }
 }
