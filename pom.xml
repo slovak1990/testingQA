@@ -17,6 +17,7 @@
         <webdrivermanager.version>5.3.2</webdrivermanager.version>
         <rest-assured.version>5.3.0</rest-assured.version>
         <poi.version>5.2.2</poi.version>
+        <qatools.properties-loader.version>1.6</qatools.properties-loader.version>
     </properties>
 
     <dependencies>
@@ -94,6 +95,12 @@
             <groupId>ru.yandex.qatools.htmlelements</groupId>
             <artifactId>htmlelements-java</artifactId>
             <version>${htmlelements-java.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.yandex.qatools.properties</groupId>
+            <artifactId>properties-loader</artifactId>
+            <version>${qatools.properties-loader.version}</version>
         </dependency>
 
         <dependency>
