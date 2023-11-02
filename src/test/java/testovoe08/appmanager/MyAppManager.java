@@ -31,7 +31,6 @@ public class MyAppManager {
         Configuration.timeout = 15000;
         Configuration.browserSize = properties.getProperty("browser.size");
         Configuration.baseUrl = System.getProperty("baseUrl08", properties.getProperty("baseUrl08"));
-        Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
 
         baseObject = new BaseObject(this);

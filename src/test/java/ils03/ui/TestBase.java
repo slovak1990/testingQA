@@ -19,7 +19,6 @@ public class TestBase {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = Browsers.CHROME;
-        Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
         mainPage = open(MAIN_PAGE_URL, MainPage.class);

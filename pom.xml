@@ -18,6 +18,7 @@
         <rest-assured.version>5.3.0</rest-assured.version>
         <poi.version>5.2.2</poi.version>
         <qatools.properties-loader.version>1.6</qatools.properties-loader.version>
+        <allure-testng.version>2.21.0</allure-testng.version>
     </properties>
 
     <dependencies>
@@ -75,7 +76,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>6.12.3</version>
+            <version>6.18.0</version>
         </dependency>
 
         <dependency>
@@ -157,6 +158,27 @@
             <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
             <version>1.31.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure-testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-selenide</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

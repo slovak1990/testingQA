@@ -35,7 +35,7 @@ public class MainPage {
     @Name("Элемент тайтла авторизации")
     private final String TITLES = "//p[contains(text(), '%s')]";
 
-    //* Работа с полем ввода
+    // Работа с полем ввода
     @Step("Ввод текстового поля")
     public void setInputField(SelenideElement locator, String str) {
         locator.hover().shouldBe(enabled).setValue(str);

@@ -25,7 +25,6 @@ public class LoginPageTest {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         Configuration.browser = Browsers.CHROME;
-        Configuration.driverManagerEnabled = true;
         Configuration.browserSize = "1920x1080";
         Configuration.headless = true;
         loginPage = open(LOGIN_PAGE_URL, LoginPage.class);

@@ -30,7 +30,6 @@ public class MyAppManager {
         Configuration.timeout = 15000;
         Configuration.browserSize = properties.getProperty("browser.size");
         Configuration.baseUrl = System.getProperty("baseUrlSimbir", properties.getProperty("baseUrlSimbir"));
-        Configuration.driverManagerEnabled = true;
         Configuration.headless = false;
 
         baseObject = new BaseObject(this);
