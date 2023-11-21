@@ -4,7 +4,7 @@ import hackMeBank11.ui.TestBase;
 import hackMeBank11.ui.pojo.ui.steps.MainStep;
 import io.qameta.allure.*;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
