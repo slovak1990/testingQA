@@ -5,3 +5,4 @@
 2. пробное ILS, март 2023 г., пакет ils03
 3. тестовое, август 2023г., пакет testing08
 4. playwright, demo, август 2023 г., playwrightDemo
+5. тестовое, ноябрь 2023 г., hackMeBank
